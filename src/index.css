@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.gradient{
+background: rgb(0,212,255);
+background: linear-gradient(90deg, rgb(0, 255, 213) 5%, rgba(94, 138, 226, 0.646) 49%, rgb(73, 149, 211) 98%);
+}
+
+@media (max-width: 600px) {
+    .containerFull{
+        margin-bottom: 150px;
+    }
+    
+.headerContainer{
+display: flex;
+justify-content: center;
+}
+    .img{
+        width: 150px;
+        height: 90px;
+    }
+    .nameLogo{
+        
+        display: none;
+        right: -150px;
+    }
+}

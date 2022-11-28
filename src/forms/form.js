@@ -1,29 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import ListPicker from 'react-list-picker'
-import axios from 'axios'
+import React, {} from 'react'
+
 
 const Form = () => {
 
-
-    // const [datos, setDatos] = useState({
-    //     nombre: '',
-    //     apellido: ''
-    // })
-
-    // const handleInputChange = (event) => {
-  
-    //     setDatos({
-    //         ...datos,
-    //         [event.target.name]: event.target.value
-    //     })
-    // }
-
-   
-
-    // const enviarDatos = (event) => {
-    //     event.preventDefault()
-    //     console.log('enviando datos...' + datos.nombre + ' ' + datos.apellido)
-    // }
 
     return (
        <div className='mt-9'>
@@ -33,15 +12,15 @@ const Form = () => {
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
               Titulo del reporte:
             </label>
-            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="falla en sistema"/>
-            <p class="text-red-500 text-xs italic">ingrese e titulo del reporte.</p>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border required rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="falla en sistema"/>
+            <p class="text-black text-xs italic">ingrese e titulo del reporte*</p>
           </div>
           <div class="w-full md:w-1/2 px-3">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
               tipo de problema
             </label>
-            {/* <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/> */}
-            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+            <select class="block appearance-none w-full  bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  id="grid-state">
+                <option defaultChecked> </option>
                 <option>Tarea</option>
                 <option>Falla</option>
                 <option>Otros</option>
@@ -53,7 +32,7 @@ const Form = () => {
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
               descripcion del problema
             </label>
-            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="falla"/>
+            <textarea style={{height:'350px',maxHeight:'350px',minHeight:'350px'}} class="appearance-none  block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="falla"/>
             <p class="text-gray-600 text-xs italic">describe el reporte *</p>
           </div>
         </div>
@@ -62,7 +41,7 @@ const Form = () => {
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
               asignado por:
             </label>
-            <input class="appearance-none block w-full bg-white text-black rounded py-3 px-4 leading-tight " id="grid-city" type="text" readOnly placeholder="Albuquerque"/>
+            <input class="appearance-none block w-full bg-white text-black rounded py-3 px-4 " id="grid-city"  readOnly placeholder="Albuquerque"/>
           </div>
           <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
@@ -70,6 +49,7 @@ const Form = () => {
             </label>
             <div class="relative">
                 <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <option defaultChecked> </option>
                 <option>Muy baja</option>
                 <option>baja</option>
                 <option>media</option>
